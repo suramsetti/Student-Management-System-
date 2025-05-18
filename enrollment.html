@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Enrollment & Attendance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="main-container">
+    <h1>📝 Student Enrollment</h1>
+
+    <form id="studentForm">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="text" id="roll" placeholder="Roll Number" required />
+      <input type="text" id="dept" placeholder="Department" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <button type="submit">Add Student</button>
+    </form>
+
+    <h2>📋 Enrolled Students</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Roll No</th>
+          <th>Department</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="studentList"></tbody>
+    </table>
+  </div>
+
+  <script src="enrollment.js"></script>
+</body>
+</html>

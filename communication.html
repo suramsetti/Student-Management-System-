@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Communication Panel with Replies</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    form, .reply-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input, textarea, select, button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border: none;
+      width: fit-content;
+      align-self: flex-start;
+    }
+
+    button:hover {
+      background: #388e3c;
+    }
+
+    .message-group {
+      margin-bottom: 40px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      vertical-align: top;
+    }
+
+    td button {
+      margin-right: 5px;
+    }
+
+    .replies {
+      margin-left: 40px;
+      margin-top: 10px;
+      border-left: 3px solid #4caf50;
+      padding-left: 15px;
+    }
+
+    .reply-form {
+      margin-top: 10px;
+      margin-left: 40px;
+      max-width: 500px;
+    }
+
+    .reply-toggle-btn {
+      font-size: 14px;
+      cursor: pointer;
+      color: #007BFF;
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 5px 0 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📬 Communication Panel with Replies</h1>
+
+    <form id="messageForm">
+      <input type="text" id="roll" placeholder="Roll No" required />
+      <select id="role" required>
+        <option value="">Select Role</option>
+        <option value="Student">Student</option>
+        <option value="Teacher">Teacher</option>
+        <option value="Parent">Parent</option>
+      </select>
+      <textarea id="message" placeholder="Enter your message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="groupedMessages"></div>
+  </div>
+
+  <script src="communication.js"></script>
+</body>
+</html>

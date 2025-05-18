@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Attendance Tracking</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    label {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .attendance-label {
+      margin-left: 6px;
+    }
+
+    input[type="checkbox"]:not(:checked) + .attendance-label::after {
+      content: " (Absent)";
+      color: red;
+      font-weight: bold;
+      margin-left: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <h1>🗓️ Attendance Tracking</h1>
+
+    <form id="attendanceForm">
+      <input type="text" id="roll" placeholder="Enter Roll Number" required />
+
+      <label>
+        <input type="checkbox" id="attendanceCheckbox" />
+        <span class="attendance-label">Present</span>
+      </label>
+
+      <button type="submit">Mark Attendance</button>
+    </form>
+
+    <h2>Attendance Records</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Roll No</th>
+          <th>Name</th>
+          <th>Attendance</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="attendanceList"></tbody>
+    </table>
+  </div>
+
+  <script src="attendance.js"></script>
+</body>
+</html>

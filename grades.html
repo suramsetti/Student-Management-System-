@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grade Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="main-container">
+    <h1>📊 Grade Management</h1>
+
+    <form id="gradeForm">
+      <input type="text" id="roll" placeholder="Roll Number" required />
+      <input type="number" id="marks" placeholder="Marks (0-100)" min="0" max="100" required />
+      <button type="submit">Assign Grade</button>
+    </form>
+
+    <h2>Assigned Grades</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Roll No</th>
+          <th>Marks</th>
+          <th>Grade</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="gradeList"></tbody>
+    </table>
+  </div>
+
+  <script src="grades.js"></script>
+</body>
+</html>
